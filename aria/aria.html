@@ -2451,7 +2451,12 @@
 				<li>If a <code>cell</code> contains a single interactive <rref>widget</rref> that will not consume arrow key presses when it receives focus, such as a <rref>checkbox</rref>,  <rref>button</rref>, or <rref>link</rref>, authors MAY set focus on the interactive element contained in the <code>cell</code>. This allows the contained widget to be directly operable.</li>
 				<li>Otherwise, authors SHOULD ensure the element that receives focus is a <rref>gridcell</rref>, <rref>rowheader</rref>, or <rref>columnheader</rref> element.</li>
 </ul>				
-				<p>In addition, if the content of a cell is editable or the cell contains multiple interactive elements, the author SHOULD provide a mechanism for changing modes of interaction so the user can interact with the content of the cell rather than the grid. For example, in a spreadsheet application, the <kbd>ENTER</kbd> key might be used to activate a cell editing mode so the directional arrow keys can then be used to move a caret inside of a <rref>textbox</rref> instead of moving focus among the cells of the <code>grid</code>. </p>
+				<p>Authors SHOULD provide a mechanism for changing to an interaction or edit mode that allows users to navigate inside a single cell and interact with its content if focusable cells contain any of the following:</p>
+				<ul>
+				<li>A widget that requires arrow keys to operate, e.g., a contained combobox or radio group could receive focus by activating the cell when it has focus.</li>
+				<li>Multiple interactive elements, e.g., a cell that contains several links could be opened into a semi-modal experience when activated.</li>
+				<li>Editable content, e.g., in a spreadsheet application, the <kbd>ENTER</kbd> key might be used to activate a cell editing mode so the directional arrow keys can then be used to move a caret inside of a <rref>textbox</rref>.</li>
+								</ul>
 				<p>Authors MAY use a <rref>gridcell</rref> to display the result of a formula, which could be editable by the user. In a spreadsheet application, for example, a <code>gridcell</code> may show a value calculated from a formula until the user activates the <code>gridcell</code> for editing when a <rref>textbox</rref> appears in the <code>gridcell</code> containing the formula in an editable state.</p>
 				<!-- make sure the following para remains synced with its counterpart in #treegrid -->
 				 <p>If <pref>aria-readonly</pref> is set on an element with role <code>grid</code>, User Agents MUST propagate the value to all <rref>gridcell</rref> elements owned by the <code>grid</code> and expose the value in the accessibility API. An author MAY override the propogated value of <pref>aria-readonly</pref> for an individual <rref>gridcell</rref> element.</p>
