@@ -1430,7 +1430,7 @@
 		<div class="role" id="combobox">
 			<rdef>combobox</rdef>
 			<div class="role-description">
-				<p>A presentation of a <rref>select</rref>; usually similar to a <rref>textbox</rref> where users can type ahead to select an option, or type to enter arbitrary text as a new item in the list. See related <rref>listbox</rref>.</p>
+				<p>A <rref>select</rref> made from a <rref>textbox</rref> combined with a <rref>composite</rref>, such as a <rref>listbox</rref> or <rref>grid</rref>, where the <code>textbox</code> value controls values listed in the <code>composite</code>, enabling the user to select a value from the list or,  in some cases, add a new value to the list. </p>
 				<p><code>combobox</code> is the combined presentation of a single line textfield with a listbox popup. The <code>combobox</code> may be editable. Typically editable combo boxes are used for autocomplete behavior, and authors SHOULD set <pref>aria-autocomplete</pref> attribute on the textfield.</p>
 				<ul>
 					<li>If an author sets a combobox's value of aria-autocomplete to 'none' (default), authors MUST manage and set focus on the associated listbox, so assistive technologies can follow the currently selected value.</li>
