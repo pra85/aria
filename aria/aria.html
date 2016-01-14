@@ -4581,7 +4581,8 @@
 			<rdef>password</rdef>
 			<div class="role-description">
 				<p>[ARIA 1.1] A type of <rref>textbox</rref> intended for entering a password.</p>
-				<p>The <code>password</code> <a>role</a> makes it possible for <a>assistive technologies</a> to customize their behavior in order to not inadvertently expose private information. For instance, a screen reader which normally echoes key presses may instead remain silent or echo each displayed character as it is inserted. In order to facilitate the latter behavior, authors SHOULD set the <code>password</code> <a>element's</a> text to characters which obscure the real value and update that text each time a character is inserted or deleted by the user.</p>
+				<p>The <code>password</code> <a>role</a> makes it possible for <a>assistive technologies</a> to customize their behavior in order to not inadvertently expose private information. For instance, a screen reader configured by the user to echo key presses might instead emit a sound or speak each displayed character as it is inserted into the field.</p>
+				<p>Authors MUST set the <code>password</code> <a>element's</a> text to the characters being displayed so that <a>assistive technologies</a> can present what is visible on screen. Authors MUST update the <a>element's</a> text each time a character is inserted or deleted by the user so that <a>assistive technologies</a> can confirm input according to the user's preferences.</p>
 			</div>
 			<table class="role-features">
 				<caption>Characteristics:</caption>
