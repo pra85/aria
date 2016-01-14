@@ -522,6 +522,7 @@
 				<li><rref>menuitemcheckbox</rref></li>
 				<li><rref>menuitemradio</rref></li>
 				<li><rref>option</rref></li>
+				<li><rref>password</rref></li>
 				<li><rref>progressbar</rref></li>
 				<li><rref>radio</rref></li>
 				<li><rref>scrollbar</rref></li>
@@ -4571,6 +4572,77 @@
 					<tr>
 						<th class="implicit-values-head" scope="row">Implicit Value for Role:</th>
 						<td class="implicit-values">Default for <pref>aria-selected</pref> is <code class="default">false</code>.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr/>
+		<div class="role" id="password">
+			<rdef>password</rdef>
+			<div class="role-description">
+				<p>[ARIA 1.1] A type of <rref>textbox</rref> intended for entering a password.</p>
+				<p>The <code>password</code> <a>role</a> makes it possible for <a>assistive technologies</a> to customize their behavior in order to not inadvertently expose private information. For instance, a screen reader which normally echoes key presses may instead remain silent or echo each displayed character as it is inserted. In order to facilitate the latter behavior, authors SHOULD set the <code>password</code> <a>element's</a> text to characters which obscure the real value and update that text each time a character is inserted or deleted by the user.</p>
+			</div>
+			<table class="role-features">
+				<caption>Characteristics:</caption>
+				<thead>
+					<tr>
+						<th scope="col">Characteristic</th>
+						<th scope="col">Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="role-abstract-head" scope="row">Is Abstract:</th>
+						<td class="role-abstract"> </td>
+					</tr>
+					<tr>
+						<th class="role-parent-head" scope="row">Superclass Role:</th>
+						<td class="role-parent"><rref>textbox</rref></td>
+					</tr>
+					<tr>
+						<th class="role-children-head" scope="row">Subclass Roles:</th>
+						<td class="role-children">Placeholder</td>
+					</tr>
+					<tr>
+						<th class="role-base-head" scope="row">Base Concept:</th>
+						<td class="role-base"><a href="http://www.w3.org/TR/html5/forms.html#password-state-(type=password)"><abbr title="Hypertext Markup Language">HTML</abbr> <code>input[type="password"]</code></a></td>
+					</tr>
+					<tr>
+						<th class="role-related-head" scope="row">Related Concepts:</th>
+						<td class="role-related"> </td>
+					</tr>
+					<tr>
+						<th class="role-required-properties-head">Required States and Properties:</th>
+						<td class="role-required-properties"> </td>
+					</tr>
+					<tr>
+						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
+						<td class="role-properties"> </td>
+					</tr>
+					<tr>
+						<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+						<td class="role-inherited">Placeholder</td>
+					</tr>
+					<tr>
+						<th class="role-namefrom-head" scope="row">Name From:</th>
+						<td class="role-namefrom">author</td>
+					</tr>
+					<tr>
+						<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+						<td class="role-namerequired">True</td>
+					</tr>
+					<tr>
+						<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
+						<td class="role-namerequired-inherited"> </td>
+					</tr>
+					<tr>
+						<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
+						<td class="role-childpresentational"> </td>
+					</tr>
+					<tr>
+						<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
+						<td class="role-presentational-inherited"> </td>
 					</tr>
 				</tbody>
 			</table>
@@ -11039,6 +11111,7 @@ PUBLIC "-//W3C//ENTITIES XHTML ARIA Attributes 1.0//EN" "aria-attributes-1.mod"
 			<li>15-Oct-2015: Added <rref>figure</rref> role.</li>
 			<li>12-Nov-2015: Added <rref>feed</rref> role; made <pref>aria-posinset</pref> and <pref>aria-setsize</pref> supported properties of <rref>article</rref>; changed <sref>aria-busy</sref> so that it could be applied to all elements rather than limited to <a>live regions</a>; added normative requirement that authors MUST set <sref>aria-busy</sref> to <code>true</code> if changes to a rendered <rref>widget</rref> would result in that <rref>widget</rref> missing required owned elements during the update process.</li>
 			<li>12-Nov-2015: Changed the superclass of <rref>application</rref> from <rref>landmark</rref> to <rref>structure</rref>; removed the accessible name requirement from <rref>document</rref>.</li>
+			<li>FIXME - DATE COMMITTED: Added <rref>password</rref> role.</li>
 		</ul>
 	</section>
 	<section>
